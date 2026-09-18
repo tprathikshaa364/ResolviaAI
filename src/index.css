@@ -1,0 +1,83 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    color-scheme: dark;
+  }
+  
+  body {
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+    background-color: #040405;
+  }
+
+  code, pre, .font-mono {
+    font-family: 'JetBrains Mono', monospace;
+  }
+}
+
+/* Custom golden black scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #080808;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #2A251A;
+  border-radius: 3px;
+  border: 1px solid rgba(212, 175, 55, 0.15);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #453A23;
+}
+
+/* Golden background grid pattern */
+.bg-grid-pattern {
+  background-size: 40px 40px;
+  background-image: 
+    linear-gradient(to right, rgba(212, 175, 55, 0.04) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(212, 175, 55, 0.04) 1px, transparent 1px);
+}
+
+.bg-radial-gradient {
+  background: radial-gradient(circle at 50% 0%, rgba(212, 175, 55, 0.18) 0%, rgba(4, 4, 5, 0) 70%);
+}
+
+.card-gloss {
+  background: rgba(18, 17, 14, 0.85);
+  backdrop-filter: blur(14px);
+  border: 1px solid rgba(212, 175, 55, 0.18);
+}
+
+.card-gloss:hover {
+  border-color: rgba(245, 208, 97, 0.35);
+}
+
+/* Glowing text and effects */
+.text-glow-gold {
+  text-shadow: 0 0 24px rgba(212, 175, 55, 0.6);
+}
+
+.text-glow-emerald {
+  text-shadow: 0 0 20px rgba(16, 185, 129, 0.5);
+}
+
+.text-glow-rose {
+  text-shadow: 0 0 20px rgba(239, 68, 68, 0.5);
+}
+
+.gold-gradient-text {
+  background: linear-gradient(135deg, #FFF1C5 0%, #D4AF37 50%, #AA820A 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.gold-border-gradient {
+  border-image: linear-gradient(to bottom right, rgba(245, 208, 97, 0.4), rgba(212, 175, 55, 0.1), rgba(138, 108, 27, 0.3)) 1;
+}
